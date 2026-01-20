@@ -1,21 +1,25 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { useState } from "react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
 
   const handleLogin = (e) => {
     e.preventDefault();
-
     if (!email || !password) {
       alert("Please enter email and password");
       return;
     }
-
-    console.log("Email:", email);
-    console.log("Password:", password);
+    if (email === "demo@gmail.com" && password === "Jim123!@") {
+      document.cookie = "auth=true; path=/";
+      router.push("/items");
+    } else {
+      alert("login failed!");
+    }
   };
 
   return (
