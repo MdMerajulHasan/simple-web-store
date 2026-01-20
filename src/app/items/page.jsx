@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import React from "react";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Items = () => {
   const [items, setItems] = useState([]);
@@ -69,9 +70,12 @@ const Items = () => {
                     ${item.price}
                   </span>
 
-                  <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+                  <Link
+                    href={`/items/${item._id}`}
+                    className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
+                  >
                     View
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
