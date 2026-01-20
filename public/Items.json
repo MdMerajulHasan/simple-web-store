@@ -11,13 +11,13 @@
     "name": "Smart Watch",
     "description": "Track your health and fitness daily",
     "price": 79.99,
-    "image": "https://i.ibb.co/SwyzcPTX/smart-Watch.jpg"
+    "image": "https://i.ibb.co.com/B2YsXQ5n/smart-ghori.webp"
   },
   {
     "_id": "3",
     "name": "Mobile",
     "description": "Make Your Daily Life Easy And Smarter",
     "price": 99.99,
-    "image": "https://i.ibb.co/4nwvxpkf/smart-Phone.webp"
+    "image": "https://i.ibb.co.com/0ph6PJYQ/tecno-phone.png"
   }
 ]
