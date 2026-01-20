@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Simple Web Store Demo App:
+A simple web store demo application built with Next.js (App Router), React, and Tailwind CSS.
+The app demonstrates basic routing, mock authentication using cookies, public and protected pages, and dynamic item detail pages.
 
-## Getting Started
+Project Description:
+This project is a frontend-focused demo web store where users can:
+a. Visit a public home page
+b. Log in using demo credentials
+c. View a list of store items
+d. Open individual item detail pages using dynamic routes
+e. Authentication is mock-based and stored in browser cookies for simplicity.
+f. No real backend or database is used.
 
-First, run the development server:
+Setup & Installation:
+Follow these steps to run the project locally-
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. git clone https://github.com/MdMerajulHasan/simple-web-store.git
+2. cd simple-web-store
+3. npm install
+4. npm run dev
+5. http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Route Summary:
+Route	         Description	              Access
+/	             Home page	                  Public
+/login 	         Demo login page	          Public
+/items	         List of available items	  Public
+/items/[id]	     Dynamic item details page	  Public
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Implemented Features:
+i. Responsive home page with light & dark mode support
+ii. Demo login system (mock authentication)
+iii. Authentication stored in browser cookies
+iv. Publicly accessible item data
+v. Dynamic routing for item detail pages
+vi. Clean UI with Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Feature Explanation:
+Mock Authentication-
+Login checks demo credentials
+Sets a cookie: auth=true
+Used for simple access control
+No backend or database involved
 
-## Learn More
+Items Page-
+Displays a list of items fetched from a local JSON file
 
-To learn more about Next.js, take a look at the following resources:
+Each item card shows,
+Name
+Description
+Price
+Image
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Item Details Page-
+Uses dynamic routing (/items/[id])
+Displays full details of the selected item
+Matches item data using the dynamic id
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+UI & Styling-
+Built with Tailwind CSS
+Consistent color theme for light and dark modes
+Mobile-friendly responsive layout
 
-## Deploy on Vercel
+Technologies Used-
+Next.js (App Router)
+React
+Tailwind CSS
+JavaScript
+Cookies (for mock authentication)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Notes-
+This project uses mock authentication and is not production-ready
+Cookies are not HTTP-only
+Designed for learning, demo, and portfolio purposes
